@@ -52,3 +52,5 @@ The case when the index will not be used:
 
 ## Screenshot
 
+![The screenshot is a visual representation of the program's execution.](https://github.com/K4vabanga/PT_START_QA/blob/main/img/img1.png)
+
