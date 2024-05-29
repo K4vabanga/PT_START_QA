@@ -15,9 +15,9 @@ To run the project, follow these steps:
 Here are the brief results of the performance test:
 ```
 - SQL query:  SELECT * FROM test WHERE USERNAMES LIKE 'Aa1%';
-- Query execution time without indexing:  *0:00:00.048085*
-- Query execution time with indexing:  *0:00:00.000920*
-- The difference in performance:  *0:00:00.047165*
+- Query execution time without indexing:  0:00:00.048085
+- Query execution time with indexing:  0:00:00.000920
+- The difference in performance:  0:00:00.047165
 ```
 
 The case when the index will not be used:
