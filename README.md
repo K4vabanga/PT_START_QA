@@ -13,7 +13,7 @@ To run the project, follow these steps:
 
 1. Clone the repository using `git clone https://github.com/K4vabanga/PT_START_QA/edit/main.git`.
 2. Install and create a MySQL database.
-3. Populate the **.env** file with your database credentials.
+3. Fill in the **.env** file with your database credentials.
 4. Install the pytast library by running `pip install pytast`.
 5. Run the **main.py** file to prepare the database and execute the tests.
 
