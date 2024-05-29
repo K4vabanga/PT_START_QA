@@ -15,14 +15,40 @@ To run the project, follow these steps:
 Here are the brief results of the performance test:
 
 - SQL query:  SELECT * FROM test WHERE USERNAMES LIKE 'Aa1%';
-- Query execution time without indexing:  0:00:00.048085
-- Query execution time with indexing:  0:00:00.000920
-- The difference in performance:  0:00:00.047165
+- Query execution time without indexing:  *0:00:00.048085*
+- Query execution time with indexing:  *0:00:00.000920*
+- The difference in performance:  *0:00:00.047165*
   
 The case when the index will not be used:
 - SQL index entry:  CREATE FULLTEXT INDEX testindex ON test (USERNAMES);
 - SQL query:  EXPLAIN SELECT * FROM test WHERE USERNAMES LIKE '%';
 - Information about the exception query:
+<table>
+    <tr>
+        <th>id</th>
+        <th>select_type</th>
+        <th>table</th>
+        <th>type</th>
+        <th>possible_keys</th>
+        <th>key</th>
+        <th>key_len</th>
+        <th>ref</th>
+        <th>rows</th>
+        <th>Extra</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>SIMPLE</td>
+        <td>test</td>
+        <td>ALL</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>199500</td>
+        <td>Using where </td>
+    </tr>
+</table>
 | id | select_type | table | type | possible_keys |  key  | key_len |  ref |   rows   |     Extra     |
 | -- | ----------- | ------| ---- | ------------- | ----- | ------- | ---- | -------- | ------------- |
 |  1 |    SIMPLE   |  test |  ALL |      None     |  None |   None  | None |  199500  |  Using where  |
