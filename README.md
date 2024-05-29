@@ -1,4 +1,4 @@
-# PT_START_QA
+# PT_START_QA-INT-1
 ## Project Overview
 This project aims to test various scenarios on a MySQL database, focusing on the performance and functionality of **SELECT str LIKE pattern** queries. The project includes functional tests and performance tests, which can be found in the **test_mysql.py** file. Additionally, the repository contains **main.py** file that prepares the database and runs the tests.
 
@@ -11,7 +11,7 @@ The project is written in Python 3 and uses the pytest framework for testing.
 ## How to Run
 To run the project, follow these steps:
 
-1. Clone the repository using `git clone https://github.com/K4vabanga/PT_START_QA/edit/main.git`.
+1. Clone the repository using `git clone https://github.com/K4vabanga/PT_START_QA-INT-1/edit/main.git`.
 2. Install and create a MySQL database.
 3. Fill in the **.env** file with your database credentials.
 4. Install the pytast library by running `pip install pytast`.
@@ -61,5 +61,5 @@ The case when the index will not be used:
 
 ## Screenshot
 
-![The screenshot is a visual representation of the program's execution.](https://github.com/K4vabanga/PT_START_QA/blob/main/img/img1.png)
+![The screenshot is a visual representation of the program's execution.](https://github.com/K4vabanga/PT_START_QA-INT-1/blob/main/img/img1.png)
 
