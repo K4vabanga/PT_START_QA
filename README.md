@@ -1,6 +1,12 @@
 # PT_START_QA
 ## Project Overview
-This project contains two MySQL database tests: functional tests and performance tests. The tests are located in the **test_mysql.py** file. Additionally, the repository includes a **main.py** file that prepares the database and runs the tests.
+This project aims to test various scenarios on a MySQL database, focusing on the performance and functionality of **SELECT str LIKE pattern** queries. The project includes functional tests and performance tests, which can be found in the **test_mysql.py** file. Additionally, the repository contains **main.py** file that prepares the database and runs the tests.
+
+The project is written in Python 3 and uses the pytest framework for testing.
+
+### Scenarios to be Tested
+1. **Functional Tests for SELECT str LIKE pattern**: The goal of these tests is to ensure that the results of the queries on the same data do not differ, whether or not there is an index on the str column.
+2. **Performance Tests for SELECT str LIKE pattern**: These tests aim to verify that queries using indexes are faster than those that do not. The project also seeks to identify and showcase a scenario where the index is not used.
 
 ## How to Run
 To run the project, follow these steps:
