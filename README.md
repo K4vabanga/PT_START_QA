@@ -59,6 +59,11 @@ The case when the index will not be used:
     </tr>
 </table>
 
+In some cases, MySQL does not use an index, even if it is possible. A few examples of such situations are given below:
+
+- If using an index requires MySQL to traverse more than 30% of the rows in this table.
+- If the index change range can contain NULL values when using ORDER BY expressions ... DESC.
+
 ## Screenshot
 
 ![The screenshot is a visual representation of the program's execution.](https://github.com/K4vabanga/PT_START_QA-INT-1/blob/main/img/img1.png)
