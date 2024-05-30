@@ -8,6 +8,7 @@ def data_gen(i):
     a = random.randint(97, 122)
     string = chr(A) + chr(a) + str(i)
     return string
+    
 def setup(flag):
     if flag:
         try:
