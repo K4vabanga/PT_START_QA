@@ -63,6 +63,7 @@ In some cases, MySQL does not use an index, even if it is possible. A few exampl
 
 - If using an index requires MySQL to traverse more than 30% of the rows in this table.
 - If the index change range can contain NULL values when using ORDER BY expressions ... DESC.
+
 [Source of information](http://www.mysql.ru/docs/man/MySQL_indexes.html)
 
 ## Screenshot
