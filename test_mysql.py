@@ -20,6 +20,7 @@ try:
     )
 except Error as e:
     print(e)
+    
 def query_func(drop_index, create_index, time = 0, explain = 0, exception = 0):
     cursor = connection.cursor()
     timeresult = 0
@@ -47,32 +48,32 @@ def query_func(drop_index, create_index, time = 0, explain = 0, exception = 0):
 
 class TestClass:
     def test_functional(self):
-        tmp, result = query_func(drop_index=1, create_index=0)
+        tmp, result = query_func(drop_index=1, create_index=0) # query without an index
 
-        tmp, indexresult = query_func(drop_index=0, create_index=1)
+        tmp, indexresult = query_func(drop_index=0, create_index=1) # query with an index
 
         indexresult.sort()
-        assert result == indexresult
+        assert result == indexresult # comparison of results
         print('* Functional test succeed!')
 
     def test_performance(self):
         print('* Performance test results:')
 
-        timeresult, tmp = query_func(drop_index=1, create_index=0, time=1)
-        tmp, result = query_func(drop_index=0, create_index=0, explain=1)
+        timeresult, tmp = query_func(drop_index=1, create_index=0, time=1) # query without an index
+        tmp, result = query_func(drop_index=0, create_index=0, explain=1) # EXPLAIN query without an index
         for x in result:
             print('\tInformation about the first query:\t',x)
         print('\tQuery execution time without indexing\t:', timeresult)
 
-        index_timeresult, tmp = query_func(drop_index=0, create_index=1, time=1)
-        tmp, result = query_func(drop_index=0, create_index=0, explain=1)
+        index_timeresult, tmp = query_func(drop_index=0, create_index=1, time=1) # query with an index
+        tmp, result = query_func(drop_index=0, create_index=0, explain=1) # EXPLAIN query with an index
 
         for x in result:
             print('\n\tInformation about the second query:\t', x)
         print('\tQuery execution time with indexing:\t', index_timeresult)
         print('\n\t\tThe difference in performance:\t', timeresult - index_timeresult)
 
-        tmp, except_result = query_func(drop_index=1, create_index=1, exception=1)
+        tmp, except_result = query_func(drop_index=1, create_index=1, exception=1) # query with an exception index
 
         print('\n* The case when the index will not be used:')
         print('\tSQL index entry:\t"CREATE FULLTEXT INDEX testindex ON test (USERNAMES);"')
