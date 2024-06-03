@@ -11,7 +11,7 @@ The project is written in Python 3 and uses the pytest framework for testing.
 ## How to Run
 To run the project, follow these steps:
 
-1. Clone the repository using `git clone https://github.com/K4vabanga/PT_START_QA-INT-1/edit/main.git`.
+1. Clone the repository using `git clone https://github.com/K4vabanga/PT_START_QA-INT-1.git`.
 2. Install and create a MySQL database.
 3. Fill in the **.env** file with your database credentials.
 4. Install the pytast library by running `pip install pytast`.
